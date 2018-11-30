@@ -1,0 +1,401 @@
+/***************/
+/* MEYER RESET */
+/***************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* BASE RULE */
+@font-face {
+  font-family: Gotham-Medium;
+  /* src: url('font/gothammedium.ttf') format('truetype'); */
+  src: url('font/Gotham-Medium.woff') format('woff');
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: #fcfcfc;
+  /* font-family: Gotham-Medium, "Trebuchet MS", Arial, sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
+  color: #4d4d4d;
+  margin: auto;
+  margin-top: 3.2em;
+  padding-bottom: 0.8em;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+header {
+  font-family: Gotham-Medium, "Trebuchet MS", Arial, sans-serif;
+  /* float: right; */
+  position: fixed;
+  /* width: 27.5%; */
+  height: 100%;
+  /* left: 2%;
+  padding: 10px; */
+  margin-left: 2vw;
+  padding-left: 2%;
+  /* padding-right: 4.5%; */
+  z-index: 999;
+}
+
+.placeholder {
+  width: 27.5%;
+  order: -1;
+}
+
+.content {
+  position: relative;
+  width: 70%;
+  /* left: 32.5%; */
+  padding-top: 0.6em;
+  height: 100vh;
+  min-height: 100vh;
+  /* padding: 30px 40px 0px 300px; */
+  /* margin-left: auto; */
+  margin-right: auto;
+  /* overflow: auto; */
+  order: 1;
+}
+
+header h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: left;
+  position: relative;
+  /* margin-left: 2%; */
+  margin-right: auto;
+}
+
+header h1 {
+  margin-top: 0.4em;
+}
+
+nav {
+  margin-top: 5vh;
+  /* margin-bottom: 15px; */
+  /* margin-left: 2vw; */
+}
+
+nav li {
+  font-size: 1.8em;
+  line-height: 1.35em;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav #personal {
+  padding-bottom: 2em;
+}
+
+a {
+  color: #4d4d4d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #dd0628;
+}
+
+a:active {
+  text-decoration: line-through;
+}
+
+.post {
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.post-image {
+  flex: 0 0 60%;
+}
+
+.post-image img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-text {
+  position: relative;
+  float: right;
+  width: 40%;
+  padding-left: 3%;
+  padding-top: 5%;
+}
+
+.post-title {
+  font-size: 1.3em;
+  font-family: Gotham-Medium, "Trebuchet MS", Arial, sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.post-content {
+  margin: 0;
+  padding-top: 1.7em;
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+
+.post-location {
+  padding-top: 0.7em;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  font-style: italic;
+  color: #808080;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ***************************** */
+/* the articles  */
+.article_post {
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.2em;
+  top: 1.2em;
+  margin-bottom: 2em;
+}
+
+.article_post h1 {
+  font-family: Gotham-Medium, "Trebuchet MS", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 2.4em;
+}
+
+.article_post h2 {
+  font-size: 1.3em;
+  padding-top: 1.7em;
+  font-weight: bold;
+}
+
+.article_post h3 {
+  font-size: 1.1em;
+  padding-top: 1.2em;
+  font-weight: bold;
+}
+
+.article_post h4 {
+  padding-top: 0.7em;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  font-style: italic;
+  color: #808080;
+}
+
+.article_post p {
+  margin: 0;
+  padding-top: 1.7em;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  /* margin-right: 20px; */
+}
+
+.article_post li {
+  margin: 0;
+  padding-top: 0.9em;
+  font-size: 0.9em;
+  line-height: 1.3em;
+  /* margin-right: 20px; */
+}
+
+.post_video {
+  margin-top: 20px;
+}
+
+/* **************************** */
+/* ABOUT PAGE */
+.about_page {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.figure {
+  width: 40%;
+  order: -1;
+}
+
+.figure img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content_text {
+  width: 45%;
+  text-align: left;
+  /* margin-top: 10px; */
+  padding-left: 15px;
+}
+
+.content_text p {
+  font-size: 1.15em;
+  line-height: 1.4em;
+}
+
+/* responsive */
+@media only screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+
+  header {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    padding-left: 0%;
+  }
+
+  header h1 {
+    /* float: left; */
+    text-align: center;
+    margin: auto;
+    font-size: 2.2em;
+  }
+
+  nav {
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  nav li {
+    text-align: center;
+    font-size: 1.3em;
+  }
+
+  nav #personal {
+    padding-bottom: 0.3em;
+  }
+
+  .content {
+    width: 100%;
+    padding: 0.8em;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-image {
+    flex: 0 0 100%;
+    padding-bottom: 0.8em;
+  }
+
+  .post-image img {
+    max-width: min-device-width;
+    height: auto;
+  }
+
+  .post-text {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding-left: 0%;
+    padding-top: 0%;
+  }
+
+  .post-content {
+    padding-top: 0.5em;
+    font-size: 0.75em;
+  }
+
+  .post-location {
+    padding-top: 0.3em;
+    font-size: 0.65em;
+  }
+
+  .article_post {
+    width: 400px;
+    /* padding: 0.8em; */
+  }
+
+  .article_post img {
+    width: 400px;
+    margin: auto;
+  }
+
+  /* about page */
+  .about_page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .figure {
+    width: 100%;
+    padding-bottom: 0.3em;
+  }
+
+  .content_text {
+    width: 100%;
+    padding-left: 0px;
+    padding-bottom: 2em;
+    font-size: 0.8em;
+  }
+
+  .content_text p {
+    font-family: 'Noto Sans', sans-serif;
+  }
+}
