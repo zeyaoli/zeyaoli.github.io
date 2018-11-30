@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="Zeyao Li">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <title>Zeyao Li</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="manifest" href="meta/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <script src=".js/jquery.jscroll.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 id="name"><a href="../">Zeyao Li</a></h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="../about/">About</a>
+        </li>
+        <li>
+          <a href="../photography">Analog Photography</a>
+        </li>
+        <li>
+          <a href="../coding">Creative Coding</a>
+        </li>
+        <li>
+          <a href="../installation">Interactive Installation</a>
+        </li>
+        <li>
+          <a href="./">Media Production</a>
+        </li>
+        <li>
+          <a href="../web/">Web</a>
+        </li>
+        <li>
+          <a href="../ar">Augmented Reality</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1ky7EYz-O1F7OpgAOO1Bfo0UI4xVX5FWW/view?usp=sharing">CV</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <div id="main" class="content">
+
+    <div class = "artical_post">
+
+
+    <h1> Natural Environment Simulation</h1>
+
+    <h2>An experimental music performance that simulates the natural phenomenal sound by using hand gesture.</h2>
+
+    <h3>Description</h3>
+
+    <p>
+      My NIME (New Interfaces for Musical Expression) final project is an experimental live performance. By using Leap Motion, I played different sound sample clips through various hand gestures. These sound clips are from freesound.org, and these samples are
+      all about nature. I simulated a natural environment and told a brief story about a summer storm in the forest by using these clips. The Leap Motion functions were coded in processing with Leap Motion library.
+    </p>
+    <br>
+    <br>
+
+    <h3>Project Documentation</h3>
+
+    <iframe class="post_video" src="https://player.vimeo.com/video/213423100" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+    </div>
+
+    </div>
+    <!-- </main> -->
+
+    <!-- <footer>
+      <ul class="list-inline">
+        <li>
+          <a href="mailto:zeyaoli@nyu.edu" target="_blank">Email</a>
+        </li>
+        <li>
+          <a href="" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="http://www.linkedin.com/in/zeyaoli" target="_blank">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/zeyaoli/" target="_blank">Instagram</a>
+        </li>
+        <li>
+          <a href="https://vimeo.com/zeyaoli" target="_blank">Vimeo</a>
+        </li>
+      </ul>
+    </footer> -->
+</body>
+
+<script>
+  function hideNavigationElements() {
+    $('.PageNavigation').css("display", "none");
+  };
+
+  $('.posts').jscroll({
+    nextSelector: 'a.next',
+    debug: true,
+    contentSelector: '.posts',
+    callback: hideNavigationElements
+  });
+</script>
+
+</html>

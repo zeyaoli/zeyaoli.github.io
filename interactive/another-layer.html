@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="Zeyao Li">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <title>Zeyao Li</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+  <link rel="manifest" href="meta/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="article_post">
+
+    <a name="top"></a>
+    <h1>Another Layer</h1>
+    <h4>Spring 2018, New York, New York</h4>
+    <h4>Role: Software Development, Ideation Development, User Experience Design
+    </h4>
+    <p align="center">
+      <iframe class="post_video" src="https://player.vimeo.com/video/266410200" width="640" height="330" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </p>
+    <p>
+      “Another Layer” is an augmented reality tool that invites the visitor to scan the painting and explore the underlying layer. Painters usually had different revisions of their paintings before the final version. Through infrared reflectography,
+      the underlying painting can be revealed, however, most of the visitors never know this while they are visiting the museum. “Another Layer” is intended to bring this to the table, and create an interactive and in-depth experience to show the
+      history and the creating process of paintings.
+    </p>
+    </p>
+    <p align="center"><img src="../image/reflectography.png" width="500"></p>
+    <h4 align="center">Infrared Reflectography</h4>
+    <p>
+      Museums are places of discovery and learning. The AR experience “Another Layer” combines both of these qualities and enhances further exploration in the realm of museums. Through pointing the smartphone directly onto one of the featured
+      paintings, the visitor will experience an augmented version of the painting: underlying drawings, altered details, and sometimes different images appear on top of the original. While the naked eye can only see the first layer of paint, this
+      experience can reveal another layer.
+    </p>
+    <h2>Ideation Development</h2>
+    <p>
+      This project is a collaborative project between NYU Museum Studies grad school students and NYU Computer Science “Interactive Computing” course students. Mirabelle Spreckelsen, an NYU first-year graduate school student came up with the initial
+      idea of another layer. She reached out to me and asked for the help of the technical parts. Before we started to build the prototype, we brainstormed the best way for the visitors to interact with the underlying layer, with the current
+      technical limitation. The initial thought was that the camera could identify the painting, and display the layer on the painting. However, from the research that we did, none of the WebAR experience supported the identification of a specific
+      object so far. So we altered the interaction and made it more playful.
+    </p>
+
+    <p align="center"><img src="../image/layer-ideation-1.png" width="500"></p>
+    <p align="center"><img src="../image/layer-ideation-2.png" width="500"></p>
+    <h4 align="center">Ideation Sketch</h4>
+
+    <h2>Technical Development</h2>
+    <p>
+      For the prototype, we used the black & white marker to replace the painting. By scanning the marker which is placed next to the painting, the user will get the painting on the screen. In case visitors’ interaction will make the painting shaky
+      and unstable, the visitor can click the screen and stabilize the painting. To add more playful interaction, we let the visitor paint on the painting. The underlying layer will show up as the visitor paints.
+    </p>
+
+    <p align="center"><img src="../gif/another-layer.gif" alt="layer"></p>
+
+    <p>
+      I used a wrapper of a-frame and p5.js that made by professor <a href="https://cims.nyu.edu/~kapp/" style="font-weight: bold">Craig Kapp</a> to make the AR prototype with the core function. In the HTML file, I added the marker files and the
+      paintings (original one and
+      the underlying layer) with the a-frame
+      function: a-assets and a-marker. In the JS file, I attached the original painting (a plane) to the marker, then I created an overlay canvas above it. To display the painting in a proper size, I set a maths function that calculates the
+      scaling factor of the painting. I also set the detection for the boundary of the painting. When the visitor started to press the painting, the overlay image will be copied to the mapped position. For the prototype, we tested it on the
+      computer, instead of the phone. For the future development, we will add the touch function to support the phone screen.
+    </p>
+    <p align="center"><img src="../image/layer-ux-1.png" width="500"></p>
+    <h4 align="center">User Experience</h4>
+    <p>
+      The prototype also supports the assistive technology. Brandon Halpin created the sound detection function. The blind can speak the name of the painting, and get the description of the underlying layer. Rebecca Hom made a single website or our
+      project so that people can experience our project while we were presenting it.
+    </p>
+
+    <a href="../index.html">
+      <p align="center">&lt &lt back to check other projects</p>
+    </a>
+
+    <br>
+    <a href="#top">
+      <p> back to top</p>
+    </a>
+  </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="Zeyao Li">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <title>Zeyao Li</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+  <link rel="manifest" href="meta/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="article_post">
+
+    <a name="top"></a>
+    <h1>Annoy</h1>
+    <h4>Fall 2018, Shanghai</h4>
+    <h4>Role: Game Developer, Game Designer, Stage & Lighting Designer
+      <br>
+      Collaborator: Dee Hu, Ashley Friedland, Millicent Wong
+    </h4>
+    <p align="center"><img src="../gif/annoy-1.gif" width="500"></p>
+    <h2>Overview</h2>
+    <h3>Theme</h3>
+    <p style="padding-top:1em">
+      You are living in a student dorm, sharing a room with your roommate. You get annoyed by him everyday, because he puts googly eyes on everything that he can. So it’s time to take revenge and piss off your roommate. There is no “win or lose” in
+      the game; can you piss off your roommate before time runs out?
+    </p>
+    <h3>Genre</h3>
+    <p style="padding-top:1em">Role-playing; Casual game; Adventure</p>
+    <p align="center"><img src="../gif/annoy-4.gif" width="500"></p>
+    <h3>Gameplay Mode</h3>
+    <p style="padding-top:1em">You only need a mouse to control the character. Left click can make the character move forward. Right-click to trigger your object action (prototype is set to jump). Move the mouse to change the moving direction of the
+      view.</p>
+    <p>
+      You will possess an object in the dorm every morning randomly. You should explore the room and find objects that can interact with to annoy the roommate.
+      <br>
+      <br>
+      Your roommate has an annoyance meter. Every time the character makes interaction with other objects to piss off your roommate, the meter increases. Try to reach the highest point of the meter as fast as possible. Once you reach the highest
+      point, you will restart the game for a new task.
+      <br>
+      <br>
+      Different interactions will increase the meter differently. Some interactions may just make small changes. If you cannot find another interaction to trigger the meter for a while, the bar will be decreased (your roommate will calm down as time
+      passes).e</p>
+
+    <h3>Settings</h3>
+    <p style="padding-top:1em">Each level has a maximum 2 minutes playing time. If you fail to piss off your roommate, you will automatically restart the game and go to the next day.
+      <br>
+      <br>
+      There are 7 levels in the game, represents 7 days in a week.
+      <br>
+      <br>
+      The final score will be based on the speed you piss off your roommate, and how many days in a week that you successfully take revenge.
+    </p>
+
+    <h3>Challenges</h3>
+
+    <p style="padding-top:1em">Each level, the location of the objects is slightly different. Your roommate’s location is also different.
+      <br>
+      <br>
+      You will be assigned to different objects on a different level.
+    </p>
+
+    <p align="center"><img src="../image/annoy_catcus_1.png" width="500"></p>
+    <p align="center"><img src="../image/annoy_catcus_2.png" width="500"></p>
+
+    <h2>Core Features in the Game</h2>
+    <p>
+      In general, there are only two actions that are relevant to the game. One is to move around your character, the other one is to interact with other objects. We want to create an addictive game experience, we decide to simplify the features in
+      the game and reduce the learning cost of the game.
+      <br>
+      <br>
+      Moving around is one of the core features in the game. The player moves the mouse to change to moving direction of the character. Once the player left clicks the mouse, it moves towards the direction. There is a UI that presents the direction
+      that the character towards (like a compass).
+      <br>
+      <br>
+      Not every object in the dorm room can be interacted with. The player should figure out check different places in the room and various objects to see what is the best way to use the character to piss off the roommate. For example: If a kettle
+      moves closer to the laptop, it can pour the boiled water on the laptop. If it moves to the edge of the table, it will fall on the ground and make noise.
+    </p>
+
+
+    <p align="center"><img src="../gif/annoy-2.gif" width="500"></p>
+
+    <h2>Game Mechanics</h2>
+    <h3>Data and algorithms used</h3>
+    <li>Randomizer: every level the player will be assigned to a different object. This requires the system to randomize the objects. Also the object’s location in the room will be slightly random in different levels</li>
+    <li>Scoring System: How does the bar increase or decrease based on the timing and the interaction? How does the final score count?</li>
+    <li>Collision and Trigger Actors: What’s the feedback of each collision? Will it trigger an animation of the character, or will it keep still.</li>
+    <li>Actions (i.e., what does the player need to do to tackle the challenges)</li>
+    <h3>Internal Economy</h3>
+    <li>There is no lives in the game. Refer to the fifth and the last rule, the player will skip the level if they did not finish the game in 2 minutes.</li>
+    <li>Refer to the 3rd and 4th rule, the annoyance meter is one of the important internal economy in the game.</li>
+    <li>Refer to the last rule: the final score will be based on the speed of taking revenge and how many days that you succeed the level.
+    </li>
+    <li>Refer to the 3rd and 4th rule. The annoyance meter will be increased when the character triggered the interaction. It will be decreased if the character could not find a new interaction to piss off the roommate for a while.</li>
+
+    <p align="center"><img src="../image/annoy_view.png" width="500"></p>
+
+    <h2>Game Balance</h2>
+    <h3>Positive Feedback</h3>
+    <p style="padding-top:1em">Once the meter reaches the highest point, your roommate will make an intense reaction, and scream in the room (with a funny animation). You will go to the next day (level).</p>
+    <h3>Negative Feedback</h3>
+    <p style="padding-top:1em">If you fail to piss off your roommate in 2 minutes, nothing will happen on your roommate, you will go to the next day, until you finish the entire week.</p>
+
+    <h2>Victory Conditions</h2>
+    <p>Refer to the last rule: There is no way to win the game, the final score is calculated by the time you finish the level and the number of days that you succeed the level.
+      <br>
+      <br>
+      No losing in the game :)
+    </p>
+
+    <p align="center"><img src="../image/annoy_pen_1.png" width="500"></p>
+    <p align="center"><img src="../image/blueprint_1.png" width="500"></p>
+    <p align="center"><img src="../image/blueprint_1.png" width="500"></p>
+    <p align="center"><img src="../image/blueprint_1.png" width="500"></p>
+    <h4 align="center">The script for the prototype of the game (all the core functions)</h4>
+
+    <br>
+    <p align="center"><img src="../gif/annoy-3.gif" width="500"></p>
+
+    <a href="../index.html">
+      <p align="center">&lt &lt back to check other projects</p>
+    </a>
+
+
+    <br>
+    <a href="#top">
+      <p> back to top</p>
+    </a>
+  </div>
+
+</body>
+
+
+</html>
