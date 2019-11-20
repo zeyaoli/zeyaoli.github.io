@@ -48,8 +48,7 @@ body{
 
 
 .post{
-    margin-top: 1em;
-    margin-left: 1em;
+    margin:1em;
     font-size: 0.85em;
 }
 
@@ -85,3 +84,8 @@ p{
 #replacable{
     display:inline-block;
 }
+
+.responsive {
+    width: 100%;
+    height: auto;
+  }
